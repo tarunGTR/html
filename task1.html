@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>task1</title>
+        <meta charset="UTF-8">
+        <style type="text/css">
+    body 
+    {
+        background-color: wheat;
+    }
+    .d1
+    {
+        background-color: grey;
+        width:600px;
+        height:600px;
+        margin-top: 150px;
+        margin-left: 400px;
+        margin-right: 200px;
+        color:black;
+    }
+    .bst1
+    {
+        border-radius: 5px;
+        background-color: black;
+        color:white;
+    }
+</style>
+</head>
+<body>
+    <form name = "fm1">
+        <div class="d1">
+        <h3>____________________ELECTRICITY BILL________________________</h3>
+        <label for="uts">Enter number of units :</label>
+        <input type="text" id="uts">
+        <br><button onClick="ebill()">Generate</button>
+        <br><br><label for="bill">Bill :</label>
+        <input type="text" id="result">
+        <br><br><label for="sc">SURCHARGE</label>
+        <input type="text" id="sc">
+        <br><br><label for="tb">Total Bill : </label>
+        <input type="text" id="tb">
+        </div>
+    </form>
+</body>
+<script>
+function ebill()
+{
+x=parseInt(document.getElementById("uts").value);
+y=x*10
+document.getElementById("bill").value=y;
+}
+   
+</script>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Marksheet</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 1000px;
+            margin: 20px;
+        }
+
+        th, td {
+            border: 3px solid black;
+            padding: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mark Sheet</h1>
+
+    <table>
+        <tr>
+            <th>Subject</th>
+            <th>Marks</th>
+        </tr>
+        <tr>
+            <td>Subject 1</td>
+            <td><input type="text" id="subject1" /></td>
+        </tr>
+        <tr>
+            <td>Subject 2</td>
+            <td><input type="text" id="subject2" /></td>
+        </tr>
+        <tr>
+            <td>Subject 3</td>
+            <td><input type="text" id="subject3" /></td>
+        </tr>
+        <tr>
+            <td>Subject 4</td>
+            <td><input type="text" id="subject4" /></td>
+        </tr>
+        <tr>
+            <td>Subject 5</td>
+            <td><input type="text" id="subject5" /></td>
+        </tr>
+        <tr>
+            <td>Subject 6</td>
+            <td><input type="text" id="subject6" /></td>
+        </tr>
+    </table>
+
+    <button onclick="calculateTotal()">Calculate Total</button>
+
+    <div id="totalMarks"></div>
+    <div id="Percent"></div>
+
+    <script>
+        function calculateTotal() {
+            var subject1 = parseInt(document.getElementById('subject1').value);
+            var subject2 = parseInt(document.getElementById('subject2').value);
+            var subject3 = parseInt(document.getElementById('subject3').value);
+            var subject4 = parseInt(document.getElementById('subject4').value);
+            var subject5 = parseInt(document.getElementById('subject5').value);
+            var subject6 = parseInt(document.getElementById('subject6').value);
+            var totalMarks = subject1 + subject2 + subject3 + subject4 + subject5 + subject6;
+            var Percent = totalMarks/600 * 100;
+            if( totalMarks >= 600) {
+                alert("Marks can't exceed 600")
+                return;
+            }
+            document.getElementById("totalMarks").innerHTML= "Your total marks are :" + totalMarks;
+            document.getElementById("Percent").innerHTML = "Your Percent is :" + Percent;
+            
+            
+
+            
+        }
+
+    </script>
+</body>
+</html>
